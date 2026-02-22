@@ -34,9 +34,9 @@ function toggleStyle(id) {
     rejectedFilterBtn.classList.add('bg-gray-300', 'text-black')
 
     // if any button has black then remove
-    allFilterBtn.classList.remove('bg-black', 'text-white')
-    interviewFilterBtn.classList.remove('bg-black', 'text-white')
-    rejectedFilterBtn.classList.remove('bg-black', 'text-white')
+    allFilterBtn.classList.remove('bg-blue-700', 'text-white')
+    interviewFilterBtn.classList.remove('bg-blue-700', 'text-white')
+    rejectedFilterBtn.classList.remove('bg-blue-700', 'text-white')
 
     // console.log(id);
     const selected = document.getElementById(id)//this is the button that clicked for filter
@@ -47,7 +47,7 @@ function toggleStyle(id) {
 
     // adding black bg for current button
     selected.classList.remove('bg-gray-300', 'text-black')
-    selected.classList.add('bg-black', 'text-white')
+    selected.classList.add('bg-blue-700', 'text-white')
     // step 1 finish
 
     // show and hidden particular section
@@ -151,6 +151,7 @@ mainContainer.addEventListener('click', function (event) {
         const parentNode = event.target.closest('.card');
 
         const plantName = parentNode.querySelector('.plantName').innerText;
+        
 
         // Remove from interview list
         interviewList = interviewList.filter(item => item.plantName !== plantName);
