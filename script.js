@@ -6,6 +6,8 @@ let total = document.getElementById('total');
 let interviewCount = document.getElementById('interviewCount');
 let rejectedCount = document.getElementById('rejectedCount');
 
+let availableTotal = document.getElementById('availableTotal');
+
 const allFilterBtn = document.getElementById('all-filter-btn');
 const interviewFilterBtn = document.getElementById('interview-filter-btn');
 const rejectedFilterBtn = document.getElementById('rejected-filter-btn');
@@ -19,6 +21,7 @@ function calculateCount() {
     total.innerText = allCardSection.children.length //3
     interviewCount.innerText = interviewList.length
     rejectedCount.innerText = rejectedList.length
+    availableTotal.innerText =allCardSection.children.length
 }
 
 calculateCount()
@@ -201,12 +204,12 @@ function renderInterview() {
                     </div>
 
                     <!-- part 2 -->
-                    <div class="flex gap-2">
-                        <p class="light bg-gray-200 px-5">${inter.light}</p>
-                        
-                    </div>
+                    <p class="light">${inter.light}</p>
+                    
                     <!-- part 3 -->
-                     <p class="status">${inter.status}</p>
+                    <div class="flex gap-2">
+                         <p class="status bg-gray-200 p-2 rounded-[5px]">${inter.status}</p>
+                    </div>
                      <p class="notes">${inter.notes}</p>
 
                      <div class="flex gap-5">
@@ -217,7 +220,10 @@ function renderInterview() {
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2">Delete</button>
+                    <button class="btn-delete border-2 p-2 rounded-full 
+               hover:bg-gray-500 hover:text-white transition duration-200 cursor-pointer">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
                 </div>
         `
         filterSection.appendChild(div)
@@ -256,12 +262,12 @@ function renderRejected() {
                     </div>
 
                     <!-- part 2 -->
-                    <div class="flex gap-2">
-                        <p class="light bg-gray-200 px-5">${reject.light}</p>
-                        
-                    </div>
+                    <p class="light">${reject.light}</p>
+                    
                     <!-- part 3 -->
-                     <p class="status">${reject.status}</p>
+                    <div class="flex gap-2">
+                         <p class="status bg-gray-200 p-2 rounded-[5px]">${reject.status}</p>
+                    </div>
                      <p class="notes">${reject.notes}</p>
 
                      <div class="flex gap-5">
@@ -272,7 +278,10 @@ function renderRejected() {
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2">Delete</button>
+                    <button class="btn-delete border-2 p-2 rounded-full 
+               hover:bg-gray-500 hover:text-white transition duration-200 cursor-pointer">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
                 </div>
         `
         filterSection.appendChild(div)

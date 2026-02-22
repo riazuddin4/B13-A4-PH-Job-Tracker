@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -14,31 +16,41 @@
     <header class="w-[80%] mx-auto">
         <h1 class="text-6xl font-bold text-green-500 py-5">Job Application Tracker</h1>
         <div class="grid grid-cols-3 gap-8">
-            <div class="bg-amber-200 p-4">
+            <div class="bg-amber-200 p-4 rounded-[5px]">
                 <p>Total</p>
                 <p id="total">0</p>
             </div>
 
-            <div class="bg-green-200 p-4">
+            <div class="bg-green-200 p-4 rounded-[5px]">
                 <p>Interview</p>
                 <p id="interviewCount">0</p>
             </div>
 
-            <div class="bg-red-200 p-4">
+            <div class="bg-red-200 p-4 rounded-[5px]">
                 <p>Rejected</p>
                 <p id="rejectedCount">0</p>
             </div>
         </div>
     </header>
 
-    <hr class="my-5">
+    <hr class="my-5 border-gray-600">
+   <div class="w-[80%] mx-auto flex justify-between items-center py-4">
+    
+    <h1 class="text-2xl font-semibold">Available Jobs</h1>
+    
+    <div class=" px-4 py-2 rounded-md flex items-center gap-1 font-medium">
+        <span id="availableTotal">0</span>
+        <span>jobs</span>
+    </div>
+
+</div>
     <main class="w-[80%] mx-auto">
         <div class="mb-6">
-            <button onclick="toggleStyle('all-filter-btn')" class="bg-black text-white px-5 py-2"
+            <button onclick="toggleStyle('all-filter-btn')" class="bg-black text-white px-5 py-2 rounded-[5px]"
                 id="all-filter-btn">All</button>
-            <button onclick="toggleStyle('interview-filter-btn')" class="bg-gray-300 px-5 py-2"
+            <button onclick="toggleStyle('interview-filter-btn')" class="bg-gray-300 px-5 py-2 rounded-[5px]"
                 id="interview-filter-btn">Interview</button>
-            <button onclick="toggleStyle('rejected-filter-btn')" class="bg-gray-300 px-5 py-2"
+            <button onclick="toggleStyle('rejected-filter-btn')" class="bg-gray-300 px-5 py-2 rounded-[5px]"
                 id="rejected-filter-btn">Rejected</button>
         </div>
 
@@ -61,24 +73,27 @@
                     </div>
 
                     <!-- part 2 -->
+                    <p class="light">Remote • Full-time • $130,000 - $175,000</p>
                     <div class="flex gap-2">
-                        <p class="light bg-gray-200 px-5">Remote • Full-time • $130,000 - $175,000</p>
 
+                        <p class="status bg-gray-200 p-2 rounded-[5px]">Not Applied</p>
                     </div>
                     <!-- part 3 -->
-                    <p class="status">Not Applied</p>
                     <p class="notes">Build cross-platform mobile applications using React Native. Work on products used
                         by millions of users worldwide.</p>
 
                     <div class="flex gap-5">
-                        <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                        <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                        <button class="interview-btn bg-green-200 px-4 py-2 rounded-[5px]">Interview</button>
+                        <button class="rejected-btn bg-red-200 px-4 py-2 rounded-[5px]">Rejected</button>
                     </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2"><i class="fa-solid fa-trash-can"></i></button>
+                    <button class="btn-delete border-2 p-2 rounded-full 
+               hover:bg-gray-500 hover:text-white transition duration-200 cursor-pointer">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
                 </div>
             </div>
 
@@ -94,28 +109,31 @@
                     </div>
 
                     <!-- part 2 -->
-                    <div class="flex gap-2">
-                        <p class="light bg-gray-200 px-5">Los Angeles, CA
-                            •
-                            Part-time
-                            •
-                            $80,000 - $120,000</p>
+                    <p class="light">Los Angeles, CA
+                        •
+                        Part-time
+                        •
+                        $80,000 - $120,000</p>
 
+                        <!-- part 3 -->
+                    <div class="flex gap-2">
+                            <p class="status bg-gray-200 p-2 rounded-[5px]">Not Applied</p>
                     </div>
-                    <!-- part 3 -->
-                    <p class="status">Not Applied</p>
                     <p class="notes">Create stunning web experiences for high-profile clients. Must have portfolio and
                         experience with modern web design trends.</p>
 
                     <div class="flex gap-5">
-                        <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                        <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                        <button class="interview-btn bg-green-200 px-4 py-2 rounded-[5px]">Interview</button>
+                        <button class="rejected-btn bg-red-200 px-4 py-2 rounded-[5px]">Rejected</button>
                     </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2">Delete</button>
+                    <button class="btn-delete border-2 p-2 rounded-full 
+               hover:bg-gray-500 hover:text-white transition duration-200 cursor-pointer">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
                 </div>
             </div>
 
@@ -131,29 +149,32 @@
                     </div>
 
                     <!-- part 2 -->
-                    <div class="flex gap-2">
-                        <p class="light bg-gray-200 px-5">Boston, MA
-                            •
-                            Full-time
-                            •
-                            $125,000 - $165,000</p>
+                    <p class="light">Boston, MA
+                        •
+                        Full-time
+                        •
+                        $125,000 - $165,000</p>
 
+                        <!-- part 3 -->
+                    <div class="flex gap-2">
+                            <p class="status bg-gray-200 p-2 rounded-[5px]">Not Applied</p>
                     </div>
-                    <!-- part 3 -->
-                    <p class="status">Not Applied</p>
                     <p class="notes">Transform complex data into compelling visualizations. Required skills: D3.js,
                         React, and strong analytical thinking.
                     </p>
 
                     <div class="flex gap-5">
-                        <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                        <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                        <button class="interview-btn bg-green-200 px-4 py-2 rounded-[5px]">Interview</button>
+                        <button class="rejected-btn bg-red-200 px-4 py-2 rounded-[5px]">Rejected</button>
                     </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2">Delete</button>
+                    <button class="btn-delete border-2 p-2 rounded-full 
+               hover:bg-gray-500 hover:text-white transition duration-200 cursor-pointer">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
                 </div>
             </div>
 
@@ -169,29 +190,32 @@
                     </div>
 
                     <!-- part 2 -->
-                    <div class="flex gap-2">
-                        <p class="light bg-gray-200 px-5">Seattle, WA
-                            •
-                            Full-time
-                            •
-                            $140,000 - $190,000 </p>
+                    <p class="light">Seattle, WA
+                        •
+                        Full-time
+                        •
+                        $140,000 - $190,000 </p>
 
+                        <!-- part 3 -->
+                    <div class="flex gap-2">
+                            <p class="status bg-gray-200 p-2 rounded-[5px]">Not Applied</p>
                     </div>
-                    <!-- part 3 -->
-                    <p class="status">Not Applied</p>
                     <p class="notes">Design and maintain scalable backend systems using Python and AWS. Work with modern
                         DevOps practices and cloud infrastructure.
                     </p>
 
                     <div class="flex gap-5">
-                        <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                        <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                        <button class="interview-btn bg-green-200 px-4 py-2 rounded-[5px]">Interview</button>
+                        <button class="rejected-btn bg-red-200 px-4 py-2 rounded-[5px]">Rejected</button>
                     </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2">Delete</button>
+                    <button class="btn-delete border-2 p-2 rounded-full 
+               hover:bg-gray-500 hover:text-white transition duration-200 cursor-pointer">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
                 </div>
             </div>
 
@@ -207,29 +231,32 @@
                     </div>
 
                     <!-- part 2 -->
+                    <p class="light">Austin, TX
+                        •
+                        Full-time
+                        •
+                        $110,000 - $150,000</p>
+                        <!-- part 3 -->
                     <div class="flex gap-2">
-                        <p class="light bg-gray-200 px-5">Austin, TX
-                            •
-                            Full-time
-                            •
-                            $110,000 - $150,000</p>
+                        <p class="status bg-gray-200 p-2 rounded-[5px]">Not Applied</p>
 
                     </div>
-                    <!-- part 3 -->
-                    <p class="status">Not Applied</p>
                     <p class="notes">Create beautiful and functional user interfaces for our suite of products. Strong
                         design skills and frontend development expertise required.
                     </p>
 
                     <div class="flex gap-5">
-                        <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                        <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                        <button class="interview-btn bg-green-200 px-4 py-2 rounded-[5px]">Interview</button>
+                        <button class="rejected-btn bg-red-200 px-4 py-2 rounded-[5px]">Rejected</button>
                     </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2">Delete</button>
+                    <button class="btn-delete border-2 p-2 rounded-full 
+               hover:bg-gray-500 hover:text-white transition duration-200 cursor-pointer">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
                 </div>
             </div>
 
@@ -245,29 +272,32 @@
                     </div>
 
                     <!-- part 2 -->
+                    <p class="light">New York, NY
+                        •
+                        Full-time
+                        •
+                        $130,000 - $170,00</p>
+                        <!-- part 3 -->
                     <div class="flex gap-2">
-                        <p class="light bg-gray-200 px-5">New York, NY
-                            •
-                            Full-time
-                            •
-                            $130,000 - $170,00</p>
 
+                        <p class="status bg-gray-200 p-2 rounded-[5px]">Not Applied</p>
                     </div>
-                    <!-- part 3 -->
-                    <p class="status">Not Applied</p>
                     <p class="notes">Build enterprise applications with JavaScript and modern frameworks. We offer
                         competitive compensation, health insurance, and professional development opportunities.
                     </p>
 
                     <div class="flex gap-5">
-                        <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                        <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                        <button class="interview-btn bg-green-200 px-4 py-2 rounded-[5px]">Interview</button>
+                        <button class="rejected-btn bg-red-200 px-4 py-2 rounded-[5px]">Rejected</button>
                     </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2">Delete</button>
+                    <button class="btn-delete border-2 p-2 rounded-full 
+               hover:bg-gray-500 hover:text-white transition duration-200 cursor-pointer">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
                 </div>
             </div>
 
@@ -283,29 +313,32 @@
                     </div>
 
                     <!-- part 2 -->
+                    <p class="light">Remote
+                        •
+                        Full-time
+                        •
+                        $120,000 - $160,000</p>
+                        <!-- part 3 -->
                     <div class="flex gap-2">
-                        <p class="light bg-gray-200 px-5">Remote
-                            •
-                            Full-time
-                            •
-                            $120,000 - $160,000</p>
 
+                        <p class="status bg-gray-200 p-2 rounded-[5px]">Not Applied</p>
                     </div>
-                    <!-- part 3 -->
-                    <p class="status">Not Applied</p>
                     <p class="notes">Join our fast-growing startup and work on our core platform. Experience with
                         Node.js and React required. Great benefits and equity package included.
                     </p>
 
                     <div class="flex gap-5">
-                        <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                        <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                        <button class="interview-btn bg-green-200 px-4 py-2 rounded-[5px]">Interview</button>
+                        <button class="rejected-btn bg-red-200 px-4 py-2 rounded-[5px]">Rejected</button>
                     </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2">Delete</button>
+                    <button class="btn-delete border-2 p-2 rounded-full 
+               hover:bg-gray-500 hover:text-white transition duration-200 cursor-pointer">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
                 </div>
             </div>
 
@@ -321,30 +354,33 @@
                     </div>
 
                     <!-- part 2 -->
+                    <p class="light">San Francisco, CA
+                        •
+                        Full-time
+                        •
+                        $130,000 - $175,000</p>
+                        <!-- part 3 -->
                     <div class="flex gap-2">
-                        <p class="light bg-gray-200 px-5">San Francisco, CA
-                            •
-                            Full-time
-                            •
-                            $130,000 - $175,000</p>
 
+                        <p class="status bg-gray-200 p-2 rounded-[5px]">Not Applied</p>
                     </div>
-                    <!-- part 3 -->
-                    <p class="status">Not Applied</p>
                     <p class="notes">We are looking for an experienced Frontend Developer to build scalable web
                         applications using React and TypeScript. You will work with a talented team on cutting-edge
                         projects.
                     </p>
 
                     <div class="flex gap-5">
-                        <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                        <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                        <button class="interview-btn bg-green-200 px-4 py-2 rounded-[5px]">Interview</button>
+                        <button class="rejected-btn bg-red-200 px-4 py-2 rounded-[5px]">Rejected</button>
                     </div>
                 </div>
 
                 <!-- main part 2 -->
                 <div>
-                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2">Delete</button>
+                   <button class="btn-delete border-2 p-2 rounded-full 
+               hover:bg-gray-500 hover:text-white transition duration-200 cursor-pointer">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
                 </div>
             </div>
 
@@ -354,7 +390,7 @@
         </section>
     </main>
 
-    
+
 
     <script src="script.js"></script>
 </body>
