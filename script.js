@@ -213,8 +213,8 @@ function renderInterview() {
                      <p class="notes">${inter.notes}</p>
 
                      <div class="flex gap-5">
-                        <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                        <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                        <button class="interview-btn bg-green-200 px-4 py-2 rounded-[5px]">Interview</button>
+                        <button class="rejected-btn bg-red-200 px-4 py-2 rounded-[5px]">Rejected</button>
                      </div>
                 </div>
 
@@ -271,8 +271,8 @@ function renderRejected() {
                      <p class="notes">${reject.notes}</p>
 
                      <div class="flex gap-5">
-                        <button class="interview-btn bg-green-200 px-4 py-2">Interview</button>
-                        <button class="rejected-btn bg-red-200 px-4 py-2">Rejected</button>
+                        <button class="interview-btn bg-green-200 px-4 py-2 rounded-[5px]">Interview</button>
+                        <button class="rejected-btn bg-red-200 px-4 py-2 rounded-[5px]">Rejected</button>
                      </div>
                 </div>
 
